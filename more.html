@@ -1,0 +1,84 @@
+<html>
+<head>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .foreground-images {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 2;
+            width: calc(100% - 40px); /* full width minus the padding */
+        }
+
+        .image-text-pair {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* space between image and text */
+        }
+
+        .foreground-image {
+            width: 300px;
+            height: auto;
+            box-shadow: 0 0 20px 10px white; /* white shadow around the image */
+        }
+
+        .text-box {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* semi-transparent white background */
+            box-shadow: 0 0 20px 10px white; /* white shadow around the text box */
+            width: calc(100% - 340px); /* full width minus image width and gap */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://c4.wallpaperflare.com/wallpaper/147/193/227/avengers-infinity-war-planet-planet-titan-the-avengers-wallpaper-preview.jpg" class="background-image">
+        <div class="foreground-images">
+            <div class="image-text-pair">
+                <img src="https://thenewsfetcher.com/wp-content/uploads/2019/08/main-qimg-fdf7f9f20dc403deef2faacd34ead883-1024x458.jpg" class="foreground-image">
+                <div class="text-box">
+                    <p>To Thanos, the end justified the means. In our world, many leaders and innovators have walked the fine line between visionary and villain, driven by a relentless pursuit of their goals</p>
+                </div>
+            </div>
+            <div class="image-text-pair">
+                <img src="https://lh6.googleusercontent.com/-c7yu9VcKrUU/AAAAAAAAAAI/AAAAAAAAAB4/9BTD5kZgZkA/photo.jpg" class="foreground-image">
+                <div class="text-box">
+                    <p>Thanos’ vision was to create a new world by destroying the old one. In our history, transformative change often arises from the ashes of what came before, driven by those unafraid to disrupt the status quo.</p>
+                </div>
+            </div>
+            <div class="image-text-pair">
+                <img src="https://www.filminquiry.com/wp-content/uploads/2018/05/Thanos.jpg" class="foreground-image">
+                <div class="text-box">
+                    <p>Thanos saw the universe's overpopulation as a ticking time bomb. Similarly, our society grapples with sustainability and resource management to prevent a future crisis</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
